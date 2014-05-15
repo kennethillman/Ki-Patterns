@@ -143,3 +143,37 @@ $bp-i: 						1920px;
 @mixin leap 				{ @if $leap 				{ @content; } }
 
 
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// MEDIA QUERIES - MAX & MIN  @inlcudes
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+$fix-mqs: false !default;
+
+@mixin media-min($width) {
+        @if $fix-mqs {
+                @if $fix-mqs >= $width {
+                        @content;        
+                }
+        }
+        @else {
+                @media screen and (min-width: $width) {
+                        @content;
+                }
+        }
+}
+
+@mixin media-max($width) {
+        @if $fix-mqs {
+                @if $fix-mqs <= $width {
+                        @content;        
+                }
+        }
+        @else {
+                @media screen and (max-width: $width) {
+                        @content;
+                }
+        }
+}
+
