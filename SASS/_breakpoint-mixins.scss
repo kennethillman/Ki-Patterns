@@ -25,11 +25,11 @@
 
 
 // MQ Device names
-$mobileAndTouch-first: 		false !default;	//  Default 	
-$mobileWide: 				false !default;	//  ex. min 480px   
+$mobileAndTouch-first: 		                false !default;	//  Default 	
+$mobileWide: 				        false !default;	//  ex. min 480px   
 $phablet: 					false !default; //  ex. min 600px	
 $tablet: 					false !default; //  ex. min 768px	
-$tabletWide: 				false !default; //  ex. min 940px
+$tabletWide: 				        false !default; //  ex. min 940px
 $laptop: 					false !default; //  ex. min 1220px
 $desktop: 					false !default; //  ex. min 1440px		
 $tv: 						false !default; //  ex. min 1680px	
@@ -69,9 +69,10 @@ $hover: 					false !default; // Touch-first
 
 ////// Choice by option
 $couch: 					false !default;
-$on-the-go: 				false !default; 
+$on-the-go: 				        false !default; 
 $speach: 					false !default;
 $leap: 						false !default;
+$batterySave:                                       false !default;
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -105,7 +106,7 @@ $bp-i: 						1920px;
 @mixin tabletWide			{ @if $tabletWide			{ @content; } }
 @mixin laptop 				{ @if $laptop 				{ @content; } }
 @mixin desktop 				{ @if $desktop 				{ @content; } }
-@mixin tv 					{ @if $tv 					{ @content; } }
+@mixin tv 				{ @if $tv 				{ @content; } }
 @mixin cinema 				{ @if $cinema 				{ @content; } }
 
 // MQ Size
@@ -137,11 +138,11 @@ $bp-i: 						1920px;
 @mixin hover 				{ @if $hover 				{ @content; } }
 
 ////// Choice by option
-@mixin couch 				{ @if $couch 				{ @content; } }
+@mixin couch 				{ @if $couch 				{ @content; } }         
 @mixin on-the-go 			{ @if $on-the-go 			{ @content; } }
 @mixin speach 				{ @if $speach 				{ @content; } }
 @mixin leap 				{ @if $leap 				{ @content; } }
-
+@mixin batterySave                      { @if $batterySave                      { @content; } }         /* Ki - Black and White */
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
