@@ -78,7 +78,8 @@ NameHere - Javascript template
               
                             setup : function() {
 
-                              console.log('setup scopeName');  
+                              console.log('setup scopeName');
+                              //scopeName.jsObject.objectSetup();
                             
                             },
                             match : function() {
@@ -98,7 +99,11 @@ NameHere - Javascript template
             }, // objectInit
 
 
+/* - - - Setup nav - - - */
 
+            objectSetup: function() {
+                    
+            }, // objectSmallClick
 
 /* - - - Small screen nav - - - */
 
@@ -139,8 +144,13 @@ NameHere - Javascript template
 ////// Load
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+    var reWi = 0;
+
     $(window).on('load', function(){
       
+        // Set inital width
+        reWi = $(window).width();
+
     });
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -168,8 +178,19 @@ NameHere - Javascript template
 	// jquery.debouncing.js, thanks Paul Irish
 
     $(window).smartresize(function(){
-  		//scopeName.jsEqualHeights();
+  		
+        // Only if if window width is resized.
+        if (reWi != $(window).width()) {
+
+            // Your code here
+
+            // Set the new window width
+            reWi = $(window).width();
+        }
+
 	});
+
+
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
